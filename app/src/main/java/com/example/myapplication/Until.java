@@ -1,5 +1,5 @@
-package com.example.myapplication.api;
+package com.example.myapplication;
 
 public class Until {
-public static String DOMAIN
+public static String DOMAIN = "http://localhost/API_ChuyenDe2/api/";
 }

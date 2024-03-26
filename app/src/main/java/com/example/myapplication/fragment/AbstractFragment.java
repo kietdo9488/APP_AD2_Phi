@@ -1,2 +1,6 @@
-package com.example.myapplication.fragment;public class AbstractFragment {
+package com.example.myapplication.fragment;
+
+import androidx.fragment.app.Fragment;
+
+public class AbstractFragment extends Fragment {
 }
