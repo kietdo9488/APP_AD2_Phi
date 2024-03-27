@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.myapplication.ViewPager.ViewPager2Adapter;
@@ -28,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager2Adapter viewPager2Adapter;
 
     LinkedList<AbstractFragment> fragments;
+
+    private AbstractFragment fragment = null;
+
+    private FragmentTransaction transaction;
+
+    private int uiId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,5 +95,39 @@ public class MainActivity extends AppCompatActivity {
 //                return true;
 //            }
 //        });
+    }
+
+    private void updateUI(int abstractFragment) {
+        uiId = abstractFragment;
+        if (getSupportFragmentManager().findFragmentByTag(uiId + "") != null) {
+            fragment = (AbstractFragment) getSupportFragmentManager().findFragmentByTag(uiId + "");
+        } else {
+            switch (abstractFragment) {
+                case 1:
+                    Log.d("TAG", "updateUI: 1");
+                    fragment = new HomeFragment();
+                    break;
+                case 2:
+                    Log.d("TAG", "updateUI: 2");
+                    fragment = new CategoryFragment();
+                    break;
+                case 3:
+                    Log.d("TAG", "updateUI: 3");
+                    fragment = new CartFragment();
+                    break;
+                case 4:
+                    Log.d("TAG", "updateUI: 4");
+                    fragment = new ProfileFragment();
+                    break;
+            }
+        }
+        if (fragment != null) {
+            transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.vp2, fragment, uiId + "");
+            if (getSupportFragmentManager().findFragmentByTag(uiId + "") == null) {
+                transaction.addToBackStack(null);
+            }
+            transaction.commit();
+        }
     }
 }
