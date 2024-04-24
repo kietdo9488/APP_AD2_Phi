@@ -46,8 +46,6 @@ public class ChiTietSanPhamActivity extends AppCompatActivity {
             }
         });
 
-        Log.d("ddd", ""+id);
-
         getSanPhamById(id);
 
     }

@@ -16,6 +16,24 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".DangKy"
+            android:exported="false" />
+        <activity
+            android:name=".QuanLy.DanhMucChiTiet"
+            android:exported="false" />
+        <activity
+            android:name=".QuanLy.fragment.DanhMucManageFragment"
+            android:exported="false" />
+        <activity
+            android:name=".QuanLy.fragment.SanPhamManageFragment"
+            android:exported="false" />
+        <activity
+            android:name=".QuanLy.QuanLyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DangNhap"
+            android:exported="false" />
+        <activity
             android:name=".SanPhamByIdDanhMuc"
             android:exported="false" />
         <activity

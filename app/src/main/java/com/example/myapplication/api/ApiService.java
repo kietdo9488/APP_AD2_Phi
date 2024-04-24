@@ -11,6 +11,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiService {
@@ -21,6 +22,10 @@ public interface ApiService {
             .create(ApiService.class);
     @GET("TaiKhoanAll.php")
     Call<List<TaiKhoan>> getListTaiKhoan();
+    @GET("TaiKhoanById.php")
+    Call<TaiKhoan> getTaiKhoanById(@Query("Id") int id);
+    @GET("TaiKhoanByName.php")
+    Call<TaiKhoan> getTaiKhoanByNameAndPass(@Query("Key1") String key1, @Query("Key2") String key2);
 
     @GET("SanPhamAll.php")
     Call<List<SanPham>> getListSanPham();
@@ -31,4 +36,9 @@ public interface ApiService {
 
     @GET("DanhMucAll.php")
     Call<List<DanhMuc>> getListDanhMuc();
+    @GET("DanhMucByID.php")
+    Call<DanhMuc> getDanhMucById(@Query("Id") int id);
+
+    @POST("DangKyTaiKhoan.php")
+    Call<TaiKhoan> dangKyTaiKhoan(@Query("TenTaiKhoan") String tenTaiKhoan, @Query("MatKhauTaiKhoan") String matKhauTaiKhoan);
 }
