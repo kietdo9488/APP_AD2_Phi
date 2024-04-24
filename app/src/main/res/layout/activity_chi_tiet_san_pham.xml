@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChiTietSanPhamActivity"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/icon_arrow"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_sanpham_chitiet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"></de.hdodenhof.circleimageview.CircleImageView>
+    <TextView
+        android:id="@+id/ten_sanpham_chitiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Ten san pham"
+        android:textColor="#101010"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:id="@+id/gia_sanpham_chitiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f20"
+        android:textSize="17sp"
+        android:text="100000"></TextView>
+    <TextView
+        android:id="@+id/mota_sanpham_chitiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f20"
+        android:textSize="17sp"
+        android:text="abcd"></TextView>
+    <Button
+        android:text="Add to cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

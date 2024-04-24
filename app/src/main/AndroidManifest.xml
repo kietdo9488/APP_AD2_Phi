@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".DangKy"
+            android:exported="false" />
+        <activity
+            android:name=".QuanLy.DanhMucChiTiet"
+            android:exported="false" />
+        <activity
+            android:name=".QuanLy.fragment.DanhMucManageFragment"
+            android:exported="false" />
+        <activity
+            android:name=".QuanLy.fragment.SanPhamManageFragment"
+            android:exported="false" />
+        <activity
+            android:name=".QuanLy.QuanLyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DangNhap"
+            android:exported="false" />
+        <activity
+            android:name=".SanPhamByIdDanhMuc"
+            android:exported="false" />
+        <activity
+            android:name=".ChiTietSanPhamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.ProfileFragment"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.CartFragment"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.CategoryFragment"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.HomeFragment"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
